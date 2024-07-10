@@ -10,8 +10,8 @@ const output = document.getElementById("outputText");
 
 const codes = {
     "Base64": {
-        encode: btoa,
-        decode: atob
+        encode: text => btoa(text),
+        decode: text => atob(text)
     },
     "Base16 (Hexadecimal)": {
         encode: text => text.split("").map(c => c.charCodeAt(0).toString(16).padStart(2, "0")).join("").toUpperCase(),
@@ -43,7 +43,7 @@ const codes = {
     },
     "URL (Aggressive)": {
         encode: encodeURIAggressive,
-        decode: text => decodeURIComponent(decodeURI(text))
+        decode: text => decodeURIComponent(decodeURI(decodeURIComponent(text).replaceAll("%", "&percnt;"))).replaceAll("&percnt;", "%")
     },
     "URL (Aggressive, non destructive)": {
         encode: encodeURINonDestructive,
