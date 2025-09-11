@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameMC Skin Art Generator</title>
+
+    <link rel="stylesheet" href="assets/css/art.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Generator</h1>
+        <canvas id="c" width="82" height="28"></canvas>
+        <div class="controls">
+            <label>Color <input id="color" type="color" value="#ffffff"></label>
+            <label>Size <input id="size" type="range" min="1" max="5" value="2"></label>
+            <button id="clear">Clear</button>
+            <button id="fill">Fill</button>
+        </div>
+        <div class="controls">
+            <input id="upload" type="file" accept="image/*">
+        </div>
+        <br>
+        <button id="download">Generate</button>
+
+        <h1>What does this do?</h1>
+        <p>Splits a 72x24 px image into individual skins you can use to add neat graphics to your NameMC profile's skin history.</p>
+        <h3>Mock-up</h3>
+        <img height="144px" src="assets/img/preview.png"><br>
+        <p>You can upload your own image or try making your own in the editor!</p>
+    </div>
+    <script src="assets/js/art.js"></script>
+</body>
+</html>
