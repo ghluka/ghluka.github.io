@@ -35,6 +35,10 @@
         <h1>Camel Client</h1>
         <p>A quality of life utility mod for Hypixel.</p>
         <br>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+            <span id="theme-icon">🌙</span>
+            <span class="sr-only">Toggle theme</span>
+        </button>
         <a href="#download" class="btn">Download Now</a>
     </section>
 
@@ -79,11 +83,15 @@
     <section class="gallery" id="screenshots">
         <h2>Screenshots</h2>
 
-        <a href="#hud1"><img src="img/hud_1.png" draggable="false" alt="Camel Screenshot"></a>
-        <a href="#clickgui"><img src="img/clickgui.png" draggable="false" alt="Camel Screenshot"></a>
-        <a href="#hud2"><img src="img/hud_2.png" draggable="false" alt="Camel Screenshot"></a>
-        <a href="#img1"><img src="img/screenshot_1.png" draggable="false" alt="Camel Screenshot"></a>
-        <a href="#img2"><img src="img/screenshot_2.png" draggable="false" alt="Camel Screenshot"></a>
+        <div>
+            <a href="#hud1"><img src="img/hud_1.png" draggable="false" alt="Camel Screenshot"></a>
+            <a href="#clickgui"><img src="img/clickgui.png" draggable="false" alt="Camel Screenshot"></a>
+            <a href="#hud2"><img src="img/hud_2.png" draggable="false" alt="Camel Screenshot"></a>
+        </div>
+        <div>
+            <a href="#img1"><img src="img/screenshot_1.png" draggable="false" alt="Camel Screenshot"></a>
+            <a href="#img2"><img src="img/screenshot_2.png" draggable="false" alt="Camel Screenshot"></a>
+        </div>
     </section>
     <div id="hud1" class="lightbox">
         <a href="#screenshots"><img src="img/hud_1.png" draggable="false" alt="Camel Screenshot"></a>
@@ -105,5 +113,7 @@
         <p>Licensed under the GNU General Public License v3.0.</p>
         <p>&gt; <a href="https://github.com/ghluka/CamelClientLegacy" style="color:white;">GitHub</a> &lt;</p>
     </footer>
+
+    <script src="/assets/js/dark.js"></script>
 </body>
 </html>

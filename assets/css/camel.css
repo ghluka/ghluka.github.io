@@ -3,12 +3,104 @@ html, body {
     padding: 0;
     scroll-behavior: smooth;
     width: 100%;
+    background: linear-gradient(to bottom, var(--bg-2), var(--bg));
+    color: var(--text);
 }
 
 * {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
+}
+
+:root {
+    --bg: #fff9ed;
+    --bg-2: #f4e1b9;
+    --card-bg: #ffffff;
+    --text: #33221a;
+    --muted: #6b4f39;
+    --accent: #e6a857;
+    --accent-strong: #a67844;
+    --btn-bg: var(--accent);
+    --btn-bg-hover: #d69445;
+    --footer-bg: #a67844;
+    --shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+html[data-theme="light"] {
+    --bg: #fff9ed;
+    --bg-2: #f4e1b9;
+    --card-bg: #ffffff;
+    --text: #33221a;
+    --muted: #6b4f39;
+    --accent: #e6a857;
+    --accent-strong: #a67844;
+    --btn-bg: var(--accent);
+    --btn-bg-hover: #d69445;
+    --footer-bg: #a67844;
+    --shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #251e2a;
+        --bg-2: #0e0b0f;
+        --card-bg: #111316;
+        --text: #ececec;
+        --muted: #57396b;
+        --accent: #dd74fa;
+        --accent-strong: #c757e6;
+        --btn-bg: var(--accent);
+        --btn-bg-hover: #ad47d6;
+        --footer-bg: #0b0c0d;
+        --shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+}
+
+html[data-theme="dark"] {
+    --bg: #251e2a;
+    --bg-2: #0e0b0f;
+    --card-bg: #111316;
+    --text: #ececec;
+    --muted: #57396b;
+    --accent: #dd74fa;
+    --accent-strong: #c757e6;
+    --btn-bg: var(--accent);
+    --btn-bg-hover: #ad47d6;
+    --footer-bg: #0b0c0d;
+    --shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1200;
+    border: none;
+    background: rgba(22,22,22,0.6);
+    backdrop-filter: blur(6px);
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform .12s ease, .12s ease;
+    box-shadow: var(--shadow);
+    color: var(--text);
+}
+
+.theme-toggle:active {
+    transform: scale(.96);
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); border: 0;
 }
 
 h1, h2 {
@@ -24,12 +116,12 @@ a {
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to bottom, #f4e1b9, #fff6e5);
+    background: linear-gradient(var(--bg-2), var(--bg));
 }
 
 .hero h1 {
     font-size: 3.5rem;
-    color: #a67844;
+    color: var(--accent-strong);
     margin-bottom: 0;
 }
 
@@ -55,22 +147,24 @@ a {
 
 .btn {
     display: inline-block;
-    background: #e6a857;
+    background: var(--btn-bg);
     color: white;
+    transition: .2s ease, transform .08s ease;
+    box-shadow: var(--shadow);
     padding: 12px 24px;
     border-radius: 30px;
     font-weight: bold;
-    transition: 0.3s ease;
 }
 
 .btn:hover {
-    background: #d69445;
+    background: var(--btn-bg-hover);
+    transform: translateY(-1px);
 }
 
 
 .features {
     padding: 60px 20px;
-    background: #fff6e5;
+    background: var(--bg);
     text-align: center;
 }
 
@@ -86,15 +180,18 @@ a {
 .feature {
     flex: 0 1 280px;
     max-width: 320px;
-    background-color: #fff;
     border-radius: 12px;
     padding: 30px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    color: var(--text);
 }
 
 .gallery {
     padding: 60px 20px;
     text-align: center;
+    background: var(--bg);
 }
 
 .gallery img {
@@ -166,11 +263,12 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    background: var(--footer-bg);
 }
 
 .download {
     padding: 60px 20px;
-    background: #f4e1b9;
+    background: var(--bg-2);
     text-align: center;
 }
 
@@ -183,16 +281,17 @@ footer {
 }
 
 .download-option {
-    background: white;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    color: var(--text);
     border-radius: 12px;
     padding: 30px 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .download-option h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: #a67844;
+    color: var(--accent-strong);
 }
 
 .download-option p {
@@ -201,6 +300,6 @@ footer {
 
 .disabled {
     pointer-events: none;
-    background-color: #77552e;
+    background-color: var(--muted);
     cursor: not-allowed;
 }
