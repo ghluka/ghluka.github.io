@@ -44,7 +44,7 @@ html[data-theme="light"] {
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #251e2a;
-        --bg-2: #0e0b0f;
+        --bg-2: #151515;
         --card-bg: #111316;
         --text: #ececec;
         --muted: #57396b;
@@ -59,7 +59,7 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
     --bg: #251e2a;
-    --bg-2: #0e0b0f;
+    --bg-2: #151515;
     --card-bg: #111316;
     --text: #ececec;
     --muted: #57396b;
@@ -195,7 +195,8 @@ a {
 }
 
 .gallery img {
-    width: -webkit-fill-available;
+    width: auto;
+    max-height: 222px;
     max-width: 400px;
     border-radius: 12px;
     margin: 10px;
