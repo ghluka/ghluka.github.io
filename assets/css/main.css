@@ -27,7 +27,6 @@ body {
         #ff77e9 0deg,
         #b07eff 90deg,
         #6ec3f4 180deg,
-        #6ef9a5 270deg,
         #ff77e9 360deg
     );
     animation: spin 2s linear infinite;
