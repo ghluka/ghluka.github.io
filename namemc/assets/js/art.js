@@ -125,6 +125,10 @@ upload.onchange = ev => {
         const ratio = Math.min(W / img.width, H / img.height);
         const iw = img.width * ratio;
         const ih = img.height * ratio;
+        ctx.imageSmoothingEnabled = false;
+        ctx.mozImageSmoothingEnabled = false;
+        ctx.webkitImageSmoothingEnabled = false;
+        ctx.msImageSmoothingEnabled = false;
         ctx.drawImage(img, 0, 0, iw, ih);
         for (let y = 0; y < H; y++) {
             for (let x = 0; x < W; x++) {
