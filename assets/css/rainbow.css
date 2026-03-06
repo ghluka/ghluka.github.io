@@ -1,0 +1,24 @@
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: 100% 0
+    }
+}
+
+#header, .grad {
+    color: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,#EF83D7,#2EB8F0)!important;
+    background-size: 400%;
+    animation: rainbow_animation 4s linear infinite;
+    text-shadow: none;
+}
+
+#more, #header {
+    font-weight: 700;
+}

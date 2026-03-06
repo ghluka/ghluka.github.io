@@ -4,47 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Luka.ONL</title>
-    <meta property="og:title" content="Luka.ONL">
+    <title>home</title>
+
+    <meta property="og:title" content="luka.onl - home">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://luka.onl/">
-    <meta property="og:description" content="Personal portfolio and website of Luka. Connect, explore, and get in touch.">
+    <meta property="og:description" content="welcome to my personal website">
     <meta name="theme-color" content="#FF77E9">
     <meta name="msapplication-TileColor" content="#FF77E9">
     <meta name="color-scheme" content="dark light">
 
+    <!--
     <meta property="og:image" content="https://luka.onl/assets/img/cat.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="320">
     <meta property="og:image:height" content="200">
     <meta name="twitter:card" content="summary_large_image">
+    -->
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 
-    <link rel="stylesheet" href="/assets/css/spin.css">
+    <link href="/assets/css/dir.css" rel="stylesheet">
+    <link href="/assets/css/spin.css" rel="stylesheet">
+    <link href="/assets/css/rainbow.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="bg">
-
-    </div>
     <div class="bdy">
-       <h1>Under construction</h1>
-       <p>Coming soon.</p>
+        <h1 id="header">luka.onl</h1>
+        <p>hi! i'm an 18 year old university student in Canada.</p>
+        <p>the majority of my work is in private repositories, so i've put a few small projects on this site to make up for it!</p>
+
+        <!--
+        <div id="parentDirLinkBox">
+            <a id="parentDirLink" class="icon up" href="/..">
+                [go back]
+            </a>
+        </div>
+        -->
+        <h3 id="more">small projects</h3>
+        <p>a few small projects i've made.</p>
+        <details>
+            <summary><i class='bx bx-palette'></i> art tools</summary>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a class="overlay-link" href="/namemc"></a>
+                    <div class="project-image">
+                        <img src="/assets/previews/namemc.png" alt="Project preview">
+                    </div>
+                    <span class="project-body">
+                        <h3>namemc skinart tool</h3>
+                        <p>draw art for your namemc profile's skin history</p>
+                        <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/blob/main/namemc/assets/js/art.js">
+                            <i class='bx bxl-github'></i> source</a>
+                    </span>
+                </div>
+            </div>
+        </details>
+        
+        <details>
+            <summary><i class='bx bxs-rocket'></i> tech demos</summary>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a class="overlay-link" href="https://github.com/ghluka/Fibonacci-Sequence"></a>
+                    <div class="project-image">
+                        <img src="/assets/previews/fibonacci.png" alt="Project preview">
+                    </div>
+                    <span class="project-body">
+                        <h3>fibonacci</h3>
+                        <p>the fibonacci sequence in <i style="font-style: italic;">almost every</i> programming language</p>
+                        <a class="source-btn" href="https://github.com/ghluka/Fibonacci-Sequence">
+                            <i class='bx bxl-github'></i> source</a>
+                    </span>
+                </div>
+
+                <div class="project-card">
+                    <a class="overlay-link" href="/demos/encoder"></a>
+                    <div class="project-image">
+                        <img src="/assets/previews/encoder.png" alt="Project preview">
+                    </div>
+                    <span class="project-body">
+                        <h3>encode/decode</h3>
+                        <p style="overflow-wrap: break-word;">ZW5jb2RlIGFuZCBkZWNvZGUgd2VpcmQgZm9ybWF0cw</p>
+                        <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/tree/main/demos/encoder">
+                            <i class='bx bxl-github'></i> source</a>
+                    </span>
+                </div>
+            </div>
+        </details>
+        
+        <details>
+            <summary><i class='bx bxs-party'></i> fun stuff</summary>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a class="overlay-link" href="/First-Unity-Game"></a>
+                    <div class="project-image">
+                        <img src="/assets/previews/mineparkour.png" alt="Project preview">
+                    </div>
+                    <span class="project-body">
+                        <h3>first unity game</h3>
+                        <p>my first, and probably last unity game. runs in browser</p>
+                        <a class="source-btn" href="https://github.com/ghluka/First-Unity-Game">
+                            <i class='bx bxl-github'></i> source</a>
+                    </span>
+                </div>
+            </div>
+        </details>
+
     </div>
 </body>
 </html>

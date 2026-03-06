@@ -1,0 +1,142 @@
+html, body {
+    background-color: #242424;
+}
+
+h1 {
+    margin-bottom: 6px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #5e5e5e;
+}
+
+h3 {
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #5e5e5e;
+}
+    
+table {
+    border-collapse: collapse;
+}
+    
+th {
+    cursor: pointer;
+}
+    
+td.detailsColumn {
+    padding-inline-start: 2em;
+    text-align: end;
+}
+    
+a.icon {
+    padding-inline-start: 1.5em;
+    text-decoration: none;
+    user-select: auto;
+}
+    
+a.icon:hover {
+    text-decoration: underline;
+}
+    
+html[dir=rtl] a {
+    background-position-x: right;
+}
+    
+#parentDirLinkBox {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: 100% 0
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 260px);
+    gap: 1.5rem;
+}
+
+.project-card {
+    aspect-ratio: 5 / 6;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #161616;
+    border: 2px solid #5e5e5e;
+    text-decoration: none;
+}
+
+.project-image {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.project-body h3 {
+    margin: 0 0 0.5rem;
+}
+
+.project-body p {
+    flex: 1;
+    margin: 0 0 1rem;
+    color: #ddd;
+}
+
+.source-btn {
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: right;
+    font-weight: 600;
+    z-index: 2;
+}
+.source-btn:link, .source-btn:visited {
+    color: white!important;
+}
+
+.overlay-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+details {
+    margin-bottom: 6px;
+}
+
+summary {
+    font-size: 1.25rem;
+    background-color: #161616;
+    width: max-content;
+    padding: 6px 12px;
+    border: 2px solid #5e5e5e;
+    border-radius: 15px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+button, textarea, input, input, select {
+    background-color: #161616;
+    border: 1px solid #5e5e5e;
+}

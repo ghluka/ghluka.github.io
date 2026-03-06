@@ -6,13 +6,6 @@ html, body {
     margin: 0;
     padding: 0;
     position: relative;
-    overflow: hidden;
-}
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .bg {
@@ -32,6 +25,10 @@ body {
     animation: spin 2s linear infinite;
 }
 
+.bdy {
+    padding: 16px;
+}
+
 @keyframes spin {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -47,4 +44,25 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+*:not(a) {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a:link, a:visited {
+    color: #ffc8f6!important;
+}
+
+a:hover {
+    color: #ff8eec!important;
+}
+
+a:active {
+    color: #b07eff!important;
 }

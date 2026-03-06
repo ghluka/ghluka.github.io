@@ -41,6 +41,7 @@ html[data-theme="light"] {
     --shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
+/*
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #251e2a;
@@ -70,6 +71,7 @@ html[data-theme="dark"] {
     --footer-bg: #0b0c0d;
     --shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
+*/
 
 .theme-toggle {
     position: fixed;

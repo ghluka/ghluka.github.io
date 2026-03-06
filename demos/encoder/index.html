@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>encode/decode</title>
+
+    <meta property="og:title" content="luka.onl - encode/decode">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luka.onl/">
+    <meta property="og:description" content="page not found!">
+    <meta name="theme-color" content="#FF77E9">
+    <meta name="msapplication-TileColor" content="#FF77E9">
+    <meta name="color-scheme" content="dark light">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="css/encoder.css">
+    <link rel="stylesheet" href="/assets/css/dir.css">
+    <link rel="stylesheet" href="/assets/css/spin.css">
+</head>
+<body>
+    <div class="bdy" style="height: calc(100svh - 205px);">
+        <h1>encoder/decoder</h1>
+        <p>encode and decode your text!</p>
+
+        <div id="parentDirLinkBox">
+            <a href="/..">
+                [go back]
+            </a>
+        </div>
+
+        <div class="encoder">
+            <textarea id="inputText" rows="10" class="panel" spellcheck="false" style="resize:none; width:100%;"></textarea>
+
+            <div>
+                <select name="mode" id="mode" style="width: 100%">
+                </select>
+
+                <div style="display: flex; justify-content: center; gap: 4px;">
+                    <button id="encode" style="width: calc(50% - 2px);">Encode</button>
+                    <button id="decode" style="width: calc(50% - 2px);">Decode</button>
+                </div>
+                <input type="checkbox" id="livemode" name="livemode">
+                <label for="livemode"> Live mode</label><br>
+            </div>
+
+            <textarea id="outputText" rows="10" class="panel" spellcheck="false" style="resize:none; width:100%;"></textarea>
+        </div>
+    </div>
+
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>
