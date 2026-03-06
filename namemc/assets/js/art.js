@@ -171,6 +171,11 @@ downloadBtn.onclick = async () => {
             faceCanvas.getContext('2d').putImageData(cellData, 0, 0);
             tctx.drawImage(faceCanvas, 7, 7);
 
+            // change eye colour so no duplicate skins :eyes:
+            tctx.fillStyle = `hsl(${count/26*360} 90% 55%)`;
+            tctx.fillRect(22, 24, 1, 1);
+            tctx.fillRect(25, 24, 1, 1);
+
             const dataURL = tmp.toDataURL("image/png");
             zip.file(`skin_${25-count}.png`, dataURL.split(',')[1], {
                 base64: true
