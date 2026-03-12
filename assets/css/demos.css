@@ -1,0 +1,34 @@
+.encoder {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.encoder > textarea {
+    flex: 1;
+}
+
+#result {
+    font-family: ui-sans-serif, -apple-system, "system-ui", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, "sans-serif", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-feature-settings: "liga" 0;
+    font-variant-ligatures: none;
+    font-variation-settings: normal;
+    text-size-adjust: 100%;
+    text-wrap-mode: wrap;
+    unicode-bidi: isolate;
+    white-space-collapse: preserve;
+}
+label, p {
+    font-size: smaller;
+}
+
+code {
+    font-family: 'Segoe UI Mono', 'Consolas', 'Courier New', monospace;
+    font-feature-settings: "liga" 0;
+    font-variant-ligatures: none;
+    font-variation-settings: normal;
+    text-size-adjust: 100%;
+    text-wrap-mode: wrap;
+    unicode-bidi: isolate;
+    white-space-collapse: preserve;
+}

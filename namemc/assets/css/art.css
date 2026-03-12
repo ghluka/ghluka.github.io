@@ -92,6 +92,17 @@ p {
     margin-left: auto;
     padding-bottom: 66px;
 }
+h1 {
+    padding-bottom: 0px;
+    margin-bottom: 6px;
+}
+h1:first-of-type {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+#parentDirLinkBox {
+    margin-bottom: 21.4px;
+}
 @media (min-width: 764px) {
     .container {
         padding-top: 1rem;

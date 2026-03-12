@@ -1,9 +1,0 @@
-.encoder {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.encoder > textarea {
-    flex: 1;
-}
