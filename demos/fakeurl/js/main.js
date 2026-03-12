@@ -16,7 +16,7 @@ function safe(s) {
     const concatenated =
         protocol + safe(document.getElementById("domain").value + "/")
         + safe(document.getElementById("directory").value + "?")
-        + safe(document.getElementById("params").value) + ":&churl=@"
+        + safe(document.getElementById("params").value) + "&churl=@"
         + encodeURI(target).replaceAll(".", "%2E").replaceAll("?", "%3F");
     
     document.getElementById("result").value = concatenated;
