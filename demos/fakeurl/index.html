@@ -32,12 +32,16 @@
         </div>
 
         <form id="generator">
+            <label>Domain:</label><br>
             <input type="text" id="domain" placeholder="Domain (e.g. luka.onl)" value="luka.onl"><br>
+            <label>Directory:</label><br>
             <input type="text" id="directory" placeholder="Directory" value="not a rickroll"><br>
+            <label>Params:</label><br>
             <input type="text" id="params" placeholder="Params" value="ei=8fLwZbKjL5uK0PEP0q2QyAI&iflsig=AJiK0e8AAAAAZfLw4vY9G3ZsYpKq3zCq9mN7xKJ0T5Q&ved=2ahUKEwjT6s7L4qWBAxXhF1kFHZQqCFAQ4dUDCA8&uact=5"><br>
-            <input type="text" id="target" placeholder="Real link" value="youtu.be/dQw4w9WgXcQ"><br><br>
+            <label>Target link:</label><br>
+            <input type="text" id="target" placeholder="Target link" value="youtu.be/dQw4w9WgXcQ"><br><br>
             
-            <button type="button" id="concat">Concatenate</button>
+            <button type="button" id="concat">Generate</button>
         </form>
         <br>
         <textarea id="result" rows="5" class="panel" spellcheck="false" style="resize:none; width:100%;" readonly></textarea>
