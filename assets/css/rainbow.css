@@ -18,7 +18,3 @@
     animation: rainbow_animation 4s linear infinite;
     text-shadow: none;
 }
-
-#more, #header {
-    font-weight: 700;
-}

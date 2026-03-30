@@ -32,8 +32,11 @@
 <body>
     <div class="bdy">
         <h1 id="header">luka.onl</h1>
-        <p>hi! i'm an 18 year old university student in Canada.</p>
-        <p>the majority of my work is in private repositories, so i've put a few small projects on this site to make up for it!</p>
+        <p>
+            hi! my name is Luka, i am an 18 year old university student in Canada.<br>
+            this page works without javascript, however subpages may require it.<br>
+            welcome to my personal website!
+        </p>
 
         <!--
         <div id="parentDirLinkBox">
@@ -42,90 +45,158 @@
             </a>
         </div>
         -->
-        <h3 id="more">small projects</h3>
-        <p>a few small projects i've made.</p>
-        <details>
-            <summary><i class='bx bx-palette'></i> art tools</summary>
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <a class="overlay-link" href="/namemc"></a>
-                    <div class="project-image">
-                        <img src="/assets/previews/namemc.png" alt="Project preview">
+        <p style="margin-bottom: 0;">sections:</p>
+        <ul style="margin-top: 0;">
+            <li><a href="#repos" class="link">public repositories</a></li>
+            <li><a href="#web" class="link">small web projects</a></li>
+        </ul>
+
+        <!---->
+        <h3 id="repos">repositories</h3>
+        <p>some of my public github repositories.</p>
+        <div class="tabs">
+            <input type="radio" name="repo-tabs" id="tab-redt" class="tab-radio" checked>
+            <input type="radio" name="repo-tabs" id="tab-rando" class="tab-radio">
+
+            <div class="tab-labels">
+                <label for="tab-redt"><i class='bx bxs-bug'></i> red team</label>
+                <label for="tab-rando"><i class='bx bxs-dice-3'></i> random stuff</label>
+            </div>
+
+            <div class="tab-content" id="tab-redt-content">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <a class="overlay-link" href="https://github.com/ghluka/Axon"></a>
+                        <div class="project-image">
+                            <img src="/assets/previews/axon.png" alt="Project preview">
+                        </div>
+                        <span class="project-body">
+                            <h3>axon</h3>
+                            <p>https-based remote administration with tor</p>
+                            <span class="project-footer">
+                                <span class="project-year">2026</span>
+                                <a class="source-btn" href="https://github.com/ghluka/Axon">
+                                    <i class='bx bxl-github'></i> source</a>
+                            </span>
+                        </span>
                     </div>
-                    <span class="project-body">
-                        <h3>namemc skinart tool</h3>
-                        <p>draw art for your namemc profile's skin history</p>
-                        <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/blob/main/namemc/assets/js/art.js">
-                            <i class='bx bxl-github'></i> source</a>
-                    </span>
                 </div>
             </div>
-        </details>
-        
-        <details>
-            <summary><i class='bx bxs-rocket'></i> tech demos</summary>
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <a class="overlay-link" href="https://github.com/ghluka/Fibonacci-Sequence"></a>
-                    <div class="project-image">
-                        <img src="/assets/previews/fibonacci.png" alt="Project preview">
+            <div class="tab-content" id="tab-rando-content">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <a class="overlay-link" href="https://github.com/ghluka/Fibonacci-Sequence"></a>
+                        <div class="project-image">
+                            <img src="/assets/previews/fibonacci.png" alt="Project preview">
+                        </div>
+                        <span class="project-body">
+                            <h3>fibonacci</h3>
+                            <p>the fibonacci sequence in <i style="font-style: italic;">almost every</i> language</p>
+                            <span class="project-footer">
+                                <span class="project-year">2024</span>
+                                <a class="source-btn" href="https://github.com/ghluka/Fibonacci-Sequence">
+                                    <i class='bx bxl-github'></i> source</a>
+                            </span>
+                        </span>
                     </div>
-                    <span class="project-body">
-                        <h3>fibonacci</h3>
-                        <p>the fibonacci sequence in <i style="font-style: italic;">almost every</i> programming language</p>
-                        <a class="source-btn" href="https://github.com/ghluka/Fibonacci-Sequence">
-                            <i class='bx bxl-github'></i> source</a>
-                    </span>
-                </div>
-
-                <div class="project-card">
-                    <a class="overlay-link" href="/demos/encoder"></a>
-                    <div class="project-image">
-                        <img src="/assets/previews/encoder.png" alt="Project preview">
-                    </div>
-                    <span class="project-body">
-                        <h3>encode/decode</h3>
-                        <p style="overflow-wrap: break-word;">ZW5jb2RlIGFuZCBkZWNvZGUgd2VpcmQgZm9ybWF0cw</p>
-                        <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/tree/main/demos/encoder">
-                            <i class='bx bxl-github'></i> source</a>
-                    </span>
-                </div>
-
-                <div class="project-card">
-                    <a class="overlay-link" href="/demos/fakeurl"></a>
-                    <div class="project-image">
-                        <img src="/assets/previews/fakeurl.png" alt="Project preview">
-                    </div>
-                    <span class="project-body">
-                        <h3>fake url generator</h3>
-                        <p style="overflow-wrap: break-word;">generate real looking fake links</p>
-                        <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/tree/main/demos/fakeurl">
-                            <i class='bx bxl-github'></i> source</a>
-                    </span>
                 </div>
             </div>
-        </details>
-        
-        <details>
-            <summary><i class='bx bxs-party'></i> fun stuff</summary>
+        </div>
+        <!---->
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <a class="overlay-link" href="/First-Unity-Game"></a>
-                    <div class="project-image">
-                        <img src="/assets/previews/mineparkour.png" alt="Project preview">
+        <!---->
+        <h3 id="web">small web projects</h3>
+        <p>a few small projects i've made that run in your browser.</p>
+        <div class="tabs">
+            <input type="radio" name="project-tabs" id="tab-tech" class="tab-radio" checked>
+            <input type="radio" name="project-tabs" id="tab-art" class="tab-radio">
+            <input type="radio" name="project-tabs" id="tab-fun" class="tab-radio">
+
+            <div class="tab-labels">
+                <label for="tab-tech"><i class='bx bxs-rocket'></i> tech demos</label>
+                <label for="tab-art"><i class='bx bx-palette'></i> art tools</label>
+                <label for="tab-fun"><i class='bx bxs-party'></i> fun stuff</label>
+            </div>
+
+            <div class="tab-content" id="tab-art-content">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <a class="overlay-link" href="/namemc"></a>
+                        <div class="project-image">
+                            <img src="/assets/previews/namemc.png" alt="Project preview">
+                        </div>
+                        <span class="project-body">
+                            <h3>namemc skinart tool</h3>
+                            <p>draw art for your namemc profile's skin history</p>
+                            <span class="project-footer">
+                                <span class="project-year">2025</span>
+                                <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/blob/main/namemc/assets/js/art.js">
+                                    <i class='bx bxl-github'></i> source</a>
+                            </span>
+                        </span>
                     </div>
-                    <span class="project-body">
-                        <h3>first unity game</h3>
-                        <p>my first, and probably last unity game. runs in browser</p>
-                        <a class="source-btn" href="https://github.com/ghluka/First-Unity-Game">
-                            <i class='bx bxl-github'></i> source</a>
-                    </span>
                 </div>
             </div>
-        </details>
+
+            <div class="tab-content" id="tab-tech-content">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <a class="overlay-link" href="/demos/encoder"></a>
+                        <div class="project-image">
+                            <img src="/assets/previews/encoder.png" alt="Project preview">
+                        </div>
+                        <span class="project-body">
+                            <h3>encode/decode</h3>
+                            <p style="overflow-wrap: break-word;">ZW5jb2RlIGFuZCBkZWNvZGUgd2VpcmQgZm9ybWF0cw</p>
+                            <span class="project-footer">
+                                <span class="project-year">2024</span>
+                                <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/tree/main/demos/encoder">
+                                    <i class='bx bxl-github'></i> source</a>
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="project-card">
+                        <a class="overlay-link" href="/demos/fakeurl"></a>
+                        <div class="project-image">
+                            <img src="/assets/previews/fakeurl.png" alt="Project preview">
+                        </div>
+                        <span class="project-body">
+                            <h3>fake url generator</h3>
+                            <p style="overflow-wrap: break-word;">generate real looking fake links</p>
+                            <span class="project-footer">
+                                <span class="project-year">2026</span>
+                                <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/tree/main/demos/fakeurl">
+                                    <i class='bx bxl-github'></i> source</a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-fun-content">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <a class="overlay-link" href="/First-Unity-Game"></a>
+                        <div class="project-image">
+                            <img src="/assets/previews/mineparkour.png" alt="Project preview">
+                        </div>
+                        <span class="project-body">
+                            <h3>first unity game</h3>
+                            <p>my first, and probably last unity game. runs in browser</p>
+                            <span class="project-footer">
+                                <span class="project-year">2024</span>
+                                <a class="source-btn" href="https://github.com/ghluka/First-Unity-Game">
+                                    <i class='bx bxl-github'></i> source</a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
 
     </div>
 </body>
