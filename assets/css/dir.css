@@ -175,8 +175,9 @@ html[dir=rtl] a {
     margin-bottom: 6px;
 }
 
+#tab-redt:checked ~ .tab-labels label[for="tab-redt"],
 #tab-rando:checked ~ .tab-labels label[for="tab-rando"],
-#tab-redt:checked ~ .tab-labels label[for="tab-redt"] {
+#tab-mc:checked ~ .tab-labels label[for="tab-mc"] {
     border-color: #2EB8F0;
     background-color: #1A1A2A;
 }
@@ -192,7 +193,8 @@ html[dir=rtl] a {
 #tab-tech:checked ~ #tab-tech-content,
 #tab-fun:checked ~ #tab-fun-content,
 #tab-rando:checked ~ #tab-rando-content,
-#tab-redt:checked ~ #tab-redt-content {
+#tab-redt:checked ~ #tab-redt-content,
+#tab-mc:checked ~ #tab-mc-content {
     display: block;
 }
 
