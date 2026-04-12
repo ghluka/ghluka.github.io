@@ -116,25 +116,45 @@ upload.onchange = ev => {
     if (!f) return;
     const img = new Image();
     img.onload = () => {
-        ctx.fillStyle = "#fff";
-        for (let y = 0; y < H; y++) {
-            for (let x = 0; x < W; x++) {
-                if (isDrawable(x, y)) ctx.fillRect(x, y, 1, 1);
+        const targetW = 72;
+        const targetH = 24;
+
+        const tmpCanvas = document.createElement('canvas');
+        tmpCanvas.width = targetW;
+        tmpCanvas.height = targetH;
+        const tmpCtx = tmpCanvas.getContext('2d');
+        tmpCtx.imageSmoothingEnabled = false;
+        tmpCtx.mozImageSmoothingEnabled = false;
+        tmpCtx.webkitImageSmoothingEnabled = false;
+        tmpCtx.msImageSmoothingEnabled = false;
+
+        tmpCtx.clearRect(0, 0, targetW, targetH);
+        tmpCtx.drawImage(img, 0, 0, targetW, targetH);
+
+        const srcData = tmpCtx.getImageData(0, 0, targetW, targetH).data;
+        const dst = ctx.createImageData(W, H);
+
+        for (let sy = 0; sy < targetH; sy++) {
+            for (let sx = 0; sx < targetW; sx++) {
+                const cellX = Math.floor(sx / 8);
+                const cellY = Math.floor(sy / 8);
+                if (cellX === 0 && cellY === 0) continue;
+
+                const ox = sx % 8;
+                const oy = sy % 8;
+                const tx = cellX * CELL + GAP + ox;
+                const ty = cellY * CELL + GAP + oy;
+
+                const srcIdx = (sy * targetW + sx) * 4;
+                const dstIdx = (ty * W + tx) * 4;
+                dst.data[dstIdx] = srcData[srcIdx];
+                dst.data[dstIdx + 1] = srcData[srcIdx + 1];
+                dst.data[dstIdx + 2] = srcData[srcIdx + 2];
+                dst.data[dstIdx + 3] = srcData[srcIdx + 3];
             }
         }
-        const ratio = Math.min(W / img.width, H / img.height);
-        const iw = img.width * ratio;
-        const ih = img.height * ratio;
-        ctx.imageSmoothingEnabled = false;
-        ctx.mozImageSmoothingEnabled = false;
-        ctx.webkitImageSmoothingEnabled = false;
-        ctx.msImageSmoothingEnabled = false;
-        ctx.drawImage(img, 0, 0, iw, ih);
-        for (let y = 0; y < H; y++) {
-            for (let x = 0; x < W; x++) {
-                if (!isDrawable(x, y)) ctx.clearRect(x, y, 1, 1);
-            }
-        }
+
+        ctx.putImageData(dst, 0, 0);
     };
     img.src = URL.createObjectURL(f);
 };
