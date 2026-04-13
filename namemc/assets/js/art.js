@@ -197,7 +197,8 @@ downloadBtn.onclick = async () => {
             tctx.fillRect(25, 24, 1, 1);
 
             const dataURL = tmp.toDataURL("image/png");
-            zip.file(`skin_${25-count}.png`, dataURL.split(',')[1], {
+            const fileName = `skin_${String(25 - count).padStart(2, '0')}.png`;
+            zip.file(fileName, dataURL.split(',')[1], {
                 base64: true
             });
             count++;
