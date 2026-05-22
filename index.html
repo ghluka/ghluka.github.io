@@ -27,15 +27,13 @@
     <link href="/assets/css/dir.css" rel="stylesheet">
     <link href="/assets/css/spin.css" rel="stylesheet">
     <link href="/assets/css/rainbow.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="bdy">
         <h1 id="header">luka.onl</h1>
-        <p>
+        <p style="text-align: center;">
             hi! my name is Luka, i am an 18 year old university student in Canada.<br>
-            this page works without javascript, however subpages may require it.<br>
-            welcome to my personal website!
+            welcome to my personal website!<br>
         </p>
 
         <!--
@@ -46,24 +44,65 @@
         </div>
         -->
 
-        <p style="margin-bottom: 0;">sections:</p>
-        <ul style="margin-top: 0;">
+        <h2 id="contents">contents</h2>
+        <ul>
+            <li><a href="#interests" class="link">interests</a></li>
+            <li><a href="#skills" class="link">my skills</a></li>
             <li><a href="#repos" class="link">public repositories</a></li>
             <li><a href="#web" class="link">small web projects</a></li>
+            <li><a href="#contact" class="link">contact me</a></li>
         </ul>
 
+        <h2 id="skills">my skills</h2>
+        <h3>Languages I actively use in my projects</h3>
+        <img src="https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white&style=for-the-badge" alt="Go">
+        <img src="https://img.shields.io/badge/C%23-178600?logo=csharp&logoColor=white&style=for-the-badge" alt="C#">
+        <img src="https://img.shields.io/badge/LUAU-00A2FF?logo=luau&logoColor=white&style=for-the-badge" alt="LUAU">
+        <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge" alt="Python">
+        <img src="https://img.shields.io/badge/Java-E76F01?logo=openjdk&logoColor=white&style=for-the-badge" alt="Java">
+        <img src="https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white&style=for-the-badge" alt="Kotlin">
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge" alt="JavaScript">
+        <img src="https://img.shields.io/badge/LUA-2C2D72?logo=lua&logoColor=white&style=for-the-badge" alt="LUA">
+
+        <h3>Frameworks & libraries I have worked with</h3>
+        <img src="https://img.shields.io/badge/Jinja-7E0C1B?style=for-the-badge&logo=jinja&logoColor=white" alt="Jinja">
+        <img src="https://img.shields.io/badge/Flask-3BABC3?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+        <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white" alt="Selenium">
+        <img src="https://img.shields.io/badge/DotNET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="DotNET">
+        <img src="https://img.shields.io/badge/Pages-222222?style=for-the-badge&logo=github&logoColor=white" alt="Pages">
+
+        <h3>Databases I have worked with</h3>
+        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+        <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+
+        <h2 id="interests">interests</h2>
+        <ul>
+            <li>reverse engineering</li>
+            <li>cybersecurity</li>
+            <li>automation</li>
+            <li>game modding</li>
+        </ul>   
+
         <!---->
-        <h3 id="repos">repositories</h3>
+        <h2 id="repos">repositories</h2>
         <p>some of my public github repositories.</p>
-        <div class="tabs">
+        <div class="tabs" id="repo-tabs">
             <input type="radio" name="repo-tabs" id="tab-redt" class="tab-radio" checked>
             <input type="radio" name="repo-tabs" id="tab-rando" class="tab-radio">
             <input type="radio" name="repo-tabs" id="tab-mc" class="tab-radio">
 
             <div class="tab-labels">
-                <label for="tab-redt"><i class='bx bxs-bug'></i> red team</label>
-                <label for="tab-rando"><i class='bx bxs-dice-3'></i> random stuff</label>
-                <label for="tab-mc"><i class='bx bx-cube'></i> minecraft</label>
+                <label for="tab-redt">
+                    <svg class="icon"><use href="#bx-key"></use></svg> cybersecurity
+                </label>
+                
+                <label for="tab-rando">
+                    <svg class="icon"><use href="#bx-code"></use></svg> tech demos
+                </label>
+                
+                <label for="tab-mc">
+                    <svg class="icon"><use href="#bx-syringe"></use></svg> game mods
+                </label>
             </div>
 
             <div class="tab-content" id="tab-redt-content">
@@ -75,11 +114,15 @@
                         </div>
                         <span class="project-body">
                             <h3>axon</h3>
+                            <span>
+                                <dot style="--dot: #00ADD8;">Go </dot>
+                                <dot style="--dot: #3572A5;">Python</dot>
+                            </span>
                             <p>https-based remote administration with tor</p>
                             <span class="project-footer">
                                 <span class="project-year">2026</span>
                                 <a class="source-btn" href="https://github.com/ghluka/Axon">
-                                    <i class='bx bxl-github'></i> source</a>
+                                    <svg class="icon"><use href="#bx-github"></use></svg> source</a>
                             </span>
                         </span>
                     </div>
@@ -99,7 +142,26 @@
                             <span class="project-footer">
                                 <span class="project-year">2024</span>
                                 <a class="source-btn" href="https://github.com/ghluka/Fibonacci-Sequence">
-                                    <i class='bx bxl-github'></i> source</a>
+                                    <svg class="icon"><use href="#bx-github"></use></svg> source</a>
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="project-card">
+                        <a class="overlay-link" href="https://github.com/ghluka/username-checker"></a>
+                        <div class="project-image">
+                            <img src="/assets/previews/usernames.png" alt="Project preview">
+                        </div>
+                        <span class="project-body">
+                            <h3>username checker</h3>
+                            <span>
+                                <dot style="--dot: #3572A5;">Python</dot>
+                            </span>
+                            <p>scrapes platforms for available usernames</p>
+                            <span class="project-footer">
+                                <span class="project-year">2022</span>
+                                <a class="source-btn" href="https://github.com/ghluka/username-checker">
+                                    <svg class="icon"><use href="#bx-github"></use></svg> source</a>
                             </span>
                         </span>
                     </div>
@@ -109,33 +171,41 @@
             <div class="tab-content" id="tab-mc-content">
                 <div class="projects-grid">
                     <div class="project-card">
+                        <a class="overlay-link" href="/medved"></a>
+                        <div class="project-image">
+                            <img src="/assets/previews/medved.png" alt="Project preview">
+                        </div>
+                        <span class="project-body">
+                            <h3>grizzly client</h3>
+                            <span>
+                                <dot style="--dot: #A97BFF;">Kotlin</dot>
+                                <dot style="--dot: #b07219;">Java</dot>
+                            </span>
+                            <p>a minecraft fabric utility client for 1.21 and 1.8 pvp, minigames, etc</p>
+                            <span class="project-footer">
+                                <span class="project-year">2026</span>
+                                <a class="source-btn" href="https://github.com/ghluka/MedvedClient">
+                                    <svg class="icon"><use href="#bx-github"></use></svg> source</a>
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="project-card">
                         <a class="overlay-link" href="/camel"></a>
                         <div class="project-image">
                             <img src="/assets/previews/camel.png" alt="Project preview">
                         </div>
                         <span class="project-body">
                             <h3>camel client</h3>
-                            <p>a 1.8.9 minecraft utility client for pvp and hypixel</p>
+                            <span>
+                                <dot style="--dot: #A97BFF;">Kotlin</dot>
+                                <dot style="--dot: #b07219;">Java</dot>
+                            </span>
+                            <p>a minecraft 1.8.9 forge utility client for pvp and minigames</p>
                             <span class="project-footer">
                                 <span class="project-year">2025</span>
                                 <a class="source-btn" href="https://github.com/ghluka/CamelClient">
-                                    <i class='bx bxl-github'></i> source</a>
-                            </span>
-                        </span>
-                    </div>
-                    
-                    <div class="project-card">
-                        <a class="overlay-link" href="/medved"></a>
-                        <div class="project-image">
-                            <img src="/assets/previews/medved.png" alt="Project preview">
-                        </div>
-                        <span class="project-body">
-                            <h3>medved client</h3>
-                            <p>like camel, but for the latest version on fabric</p>
-                            <span class="project-footer">
-                                <span class="project-year">2026</span>
-                                <a class="source-btn" href="https://github.com/ghluka/MedvedClient">
-                                    <i class='bx bxl-github'></i> source</a>
+                                    <svg class="icon"><use href="#bx-github"></use></svg> source</a>
                             </span>
                         </span>
                     </div>
@@ -145,17 +215,25 @@
         <!---->
 
         <!---->
-        <h3 id="web">small web projects</h3>
+        <h2 id="web">small web projects</h2>
         <p>a few small projects i've made that run in your browser.</p>
-        <div class="tabs">
+        <div class="tabs" id="project-tabs">
             <input type="radio" name="project-tabs" id="tab-tech" class="tab-radio" checked>
             <input type="radio" name="project-tabs" id="tab-art" class="tab-radio">
             <input type="radio" name="project-tabs" id="tab-fun" class="tab-radio">
 
             <div class="tab-labels">
-                <label for="tab-tech"><i class='bx bxs-rocket'></i> tech demos</label>
-                <label for="tab-art"><i class='bx bx-palette'></i> art tools</label>
-                <label for="tab-fun"><i class='bx bxs-party'></i> fun stuff</label>
+                <label for="tab-tech">
+                    <svg class="icon"><use href="#bx-rocket"></use></svg> tech demos
+                </label>
+                
+                <label for="tab-art">
+                    <svg class="icon"><use href="#bx-brush-sparkles"></use></svg> art tools
+                </label>
+                
+                <label for="tab-fun">
+                    <svg class="icon"><use href="#bx-joystick"></use></svg> fun & games
+                </label>
             </div>
 
             <div class="tab-content" id="tab-art-content">
@@ -167,11 +245,14 @@
                         </div>
                         <span class="project-body">
                             <h3>namemc skinart tool</h3>
+                            <span>
+                                <dot style="--dot: #f1e05a;">JavaScript</dot>
+                            </span>
                             <p>draw art for your namemc profile's skin history</p>
                             <span class="project-footer">
                                 <span class="project-year">2025</span>
                                 <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/blob/main/namemc/assets/js/art.js">
-                                    <i class='bx bxl-github'></i> source</a>
+                                    <svg class="icon"><use href="#bx-github"></use></svg> source</a>
                             </span>
                         </span>
                     </div>
@@ -181,33 +262,39 @@
             <div class="tab-content" id="tab-tech-content">
                 <div class="projects-grid">
                     <div class="project-card">
-                        <a class="overlay-link" href="/demos/encoder"></a>
-                        <div class="project-image">
-                            <img src="/assets/previews/encoder.png" alt="Project preview">
-                        </div>
-                        <span class="project-body">
-                            <h3>encode/decode</h3>
-                            <p style="overflow-wrap: break-word;">ZW5jb2RlIGFuZCBkZWNvZGUgd2VpcmQgZm9ybWF0cw</p>
-                            <span class="project-footer">
-                                <span class="project-year">2024</span>
-                                <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/tree/main/demos/encoder">
-                                    <i class='bx bxl-github'></i> source</a>
-                            </span>
-                        </span>
-                    </div>
-
-                    <div class="project-card">
                         <a class="overlay-link" href="/demos/fakeurl"></a>
                         <div class="project-image">
                             <img src="/assets/previews/fakeurl.png" alt="Project preview">
                         </div>
                         <span class="project-body">
                             <h3>fake url generator</h3>
+                            <span>
+                                <dot style="--dot: #f1e05a;">JavaScript</dot>
+                            </span>
                             <p style="overflow-wrap: break-word;">generate real looking fake links</p>
                             <span class="project-footer">
                                 <span class="project-year">2026</span>
                                 <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/tree/main/demos/fakeurl">
-                                    <i class='bx bxl-github'></i> source</a>
+                                    <svg class="icon"><use href="#bx-github"></use></svg> source</a>
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="project-card">
+                        <a class="overlay-link" href="/demos/encoder"></a>
+                        <div class="project-image">
+                            <img src="/assets/previews/encoder.png" alt="Project preview">
+                        </div>
+                        <span class="project-body">
+                            <h3>encode/decode</h3>
+                            <span>
+                                <dot style="--dot: #f1e05a;">JavaScript</dot>
+                            </span>
+                            <p style="overflow-wrap: break-word;">ZW5jb2RlIGFuZCBkZWNvZGUgd2VpcmQgZm9ybWF0cw</p>
+                            <span class="project-footer">
+                                <span class="project-year">2024</span>
+                                <a class="source-btn" href="https://github.com/ghluka/ghluka.github.io/tree/main/demos/encoder">
+                                    <svg class="icon"><use href="#bx-github"></use></svg> source</a>
                             </span>
                         </span>
                     </div>
@@ -223,11 +310,14 @@
                         </div>
                         <span class="project-body">
                             <h3>first unity game</h3>
+                            <span>
+                                <dot style="--dot: #178600;">C#</dot>
+                            </span>
                             <p>my first, and probably last unity game.</p>
                             <span class="project-footer">
                                 <span class="project-year">2024</span>
                                 <a class="source-btn" href="https://github.com/ghluka/First-Unity-Game">
-                                    <i class='bx bxl-github'></i> source</a>
+                                    <svg class="icon"><use href="#bx-github"></use></svg> source</a>
                             </span>
                         </span>
                     </div>
@@ -236,6 +326,37 @@
         </div>
         <!---->
 
+        <h2 id="contact">contact me</h2>
+        <ul>
+            <li>signal: <a href="https://signal.me/#eu/EWnhGRE3pq0oox4Hg1KdnjOjtUNYs-tuhT1yKPUAvc-rENEQNx5Ff7h0QLRwAx1G">@luka.1000</a></li>
+        </ul>  
     </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+        <symbol id="bx-github" viewBox="0 0 24 24" fill="currentColor">
+            <g fill="currentColor"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></g>
+        </symbol>
+        <symbol id="bx-key" viewBox="0 0 24 24" fill="currentColor">
+            <g fill="currentColor"><path fill-rule="evenodd" d="M8 21c2.76 0 5-2.24 5-5 0-1.02-.31-1.96-.83-2.75l3.33-3.33 1.79 1.79 1.41-1.41-1.79-1.79L18 7.42l2.29 2.29L21.7 8.3l-2.29-2.29 1.29-1.29-1.41-1.41-8.54 8.54c-.79-.52-1.74-.83-2.75-.83-2.76 0-5 2.24-5 5s2.24 5 5 5Zm0-8c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3"></path></g>
+        </symbol>
+        <symbol id="bx-code" viewBox="0 0 24 24" fill="currentColor">
+            <g fill="currentColor"><path fill-rule="evenodd" d="M9.71 16.29 5.41 12l4.3-4.29-1.42-1.42L2.59 12l5.7 5.71zm6 1.42 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"></path></g>
+        </symbol>
+        <symbol id="bx-syringe" viewBox="0 0 24 24" fill="currentColor">
+            <g fill="currentColor"><path fill-rule="evenodd" d="M21.29 6.71 22.7 5.3l-4-4-1.41 1.41L18.58 4l-1.09 1.09L15.7 3.3l-2-2-1.41 1.41L13.58 4l-9.29 9.29A1 1 0 0 0 4 14v4.59L1.29 21.3l1.41 1.41L5.41 20H10c.27 0 .52-.11.71-.29L20 10.42l1.29 1.29 1.41-1.41-2-2-1.79-1.79L20 5.42zM9.58 18H5.99v-3.59l2.5-2.5 1.79 1.79 1.41-1.41L9.9 10.5l1.59-1.59 1.79 1.79 1.41-1.41L12.9 7.5l2.09-2.09L18.58 9z"></path></g>
+        </symbol>
+        <symbol id="bx-rocket" viewBox="0 0 24 24" fill="currentColor">
+            <g fill="currentColor"><path fill-rule="evenodd" d="M14.59 6.59c-.78.78-.78 2.05 0 2.83s2.05.78 2.83 0 .78-2.05 0-2.83-2.05-.78-2.83 0M5 16c-2 1-2 5-2 5s3 0 5-2z"></path><path d="M21 2h-3.69c-2.4 0-4.66.94-6.36 2.64L8.69 6.9a8.4 8.4 0 0 0-6.24 1.27c-.25.17-.41.44-.44.73s.08.59.29.81l12 12c.2.2.45.29.71.29s.51-.1.71-.29c1.9-1.9 1.6-5.08 1.38-6.38l2.28-2.28c1.7-1.7 2.64-3.96 2.64-6.36V3c0-.55-.45-1-1-1Zm-1 4.69c0 1.87-.73 3.63-2.05 4.95l-2.66 2.66c-.25.25-.35.61-.26.95.19.79.45 2.78-.17 4.2L4.65 9.24c2.11-.89 3.94-.32 4.03-.29.36.12.76.03 1.02-.24l2.66-2.66A6.96 6.96 0 0 1 17.31 4H20z"></path></g>
+        </symbol>
+        <symbol id="bx-brush-sparkles" viewBox="0 0 24 24" fill="currentColor">
+            <g fill="currentColor"><path fill-rule="evenodd" d="M21.09 7.33a3.114 3.114 0 0 0 0-4.41 3.114 3.114 0 0 0-4.41 0L7.8 11.78c-.71.06-1.41.27-2.01.64-1.17.72-1.81 1.89-1.81 3.29 0 .3.02.59.04.86.08 1.03.11 1.42-1.47 2.21-.32.16-.53.47-.55.82s.14.69.43.89c1 .69 2.76 1.49 4.62 1.49 1.35 0 2.74-.42 3.92-1.6 1.12-1.12 1.71-2.85 1.55-4.49l8.56-8.56Zm-3-3c.44-.44 1.15-.44 1.59 0s.44 1.15 0 1.58l-7.86 7.86a4.4 4.4 0 0 0-1.65-1.52zM9.56 18.97c-1.44 1.44-3.31 1.1-4.58.61 1.09-.98 1.13-1.99 1.04-3.16a8 8 0 0 1-.04-.71c0-.7.29-1.23.86-1.59.68-.42 1.66-.49 2.31-.16.65.32.99.81 1.18 1.28l-.05.05.1.1c.05.16.09.32.12.47.18 1.09-.22 2.37-.96 3.11ZM2.32 6.49l2.21.98.98 2.21a.533.533 0 0 0 .98 0l.98-2.21 2.21-.98a.533.533 0 0 0 0-.98l-2.21-.98-.98-2.21A.53.53 0 0 0 6.01 2c-.21-.02-.4.12-.49.31l-.99 2.14L2.3 5.52a.536.536 0 0 0 .02.97m19.44 12.14-1.66-.74-.74-1.66a.41.41 0 0 0-.36-.24c-.16-.01-.3.09-.37.23l-.74 1.6-1.67.8c-.14.07-.23.21-.23.37s.1.3.24.36l1.66.74.74 1.66a.404.404 0 0 0 .74 0l.74-1.66 1.66-.74a.404.404 0 0 0 0-.74Z"></path></g>
+        </symbol>
+        <symbol id="bx-joystick" viewBox="0 0 24 24" fill="currentColor">
+            <g fill="currentColor"><path fill-rule="evenodd" d="M16 11a1 1 0 1 0 0 2 1 1 0 1 0 0-2m2-2a1 1 0 1 0 0 2 1 1 0 1 0 0-2m-2-2a1 1 0 1 0 0 2 1 1 0 1 0 0-2m-2 2a1 1 0 1 0 0 2 1 1 0 1 0 0-2M8 8a2 2 0 1 0 0 4 2 2 0 1 0 0-4"></path><path d="M17 4H7C4.24 4 2 6.24 2 9v7.88a3.124 3.124 0 0 0 5.33 2.21l1.96-1.96c1.45-1.45 3.97-1.45 5.41 0l1.96 1.96c.59.59 1.37.91 2.21.91 1.72 0 3.12-1.4 3.12-3.12V9c0-2.76-2.24-5-5-5Zm3 12.88a1.118 1.118 0 0 1-1.91.79l-1.96-1.96c-1.1-1.1-2.56-1.71-4.12-1.71s-3.02.61-4.12 1.71l-1.96 1.96a1.118 1.118 0 0 1-1.91-.79V9c0-1.65 1.35-3 3-3h10c1.65 0 3 1.35 3 3v7.88Z"></path></g>
+        </symbol>
+    </svg>
+
+    <script src="/assets/js/scroll.js"></script>
 </body>
 </html>

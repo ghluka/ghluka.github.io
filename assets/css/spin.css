@@ -46,10 +46,6 @@ html, body {
     user-select: none;
 }
 
-*:not(a) {
-    color: white;
-}
-
 a {
     text-decoration: none;
     transition: all 0.2s ease-in-out;
