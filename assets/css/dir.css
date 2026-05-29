@@ -293,3 +293,14 @@ dot::before {
     position: relative;
     top: 1px;
 }
+
+#pgp {
+    width: 100%;
+    height: 15em;
+    resize: none;
+    font-family: monospace;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
