@@ -12,6 +12,7 @@ function initCarousel(grid) {
     if (totalCardsWidth <= grid.offsetWidth) return;
 
     grid._carouselInit = true;
+    grid.style.overflowX = 'hidden'; 
 
     cards.forEach(card => grid.appendChild(card.cloneNode(true)));
 
